@@ -11,6 +11,9 @@ def read_user_details(username: str):
     return {"result": resp.json()}
 
 
+@app.get("/status")
+def app_status():
+    return {"status": "up"}
 
 @app.get("/users/")
 def find_first_forty_users():
